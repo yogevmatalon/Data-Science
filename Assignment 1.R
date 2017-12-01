@@ -7,7 +7,7 @@
 #install.packages("reshape2")
 #install.packages("DMwR")
 #install.packages("lubridate")
-#install.packages("dplyr")lubridate
+#install.packages("dplyr") 
 #install.packages("lubridate")
 
 library("ggplot2")
@@ -17,7 +17,7 @@ library("ggplot2")
 # 1.b. Set your working directory to be your assignment folder for easy access. 
 # From now on, if needed, do not use the full path, but only the name of the file within this path.
 ################################
-setwd("/Users/ofirmagdaci/Downloads/Assignment1")
+setwd("/Users/yogevmatalon/Downloads/Assignment1")
 
 # 1.c. Import the CSV file " chicago_taxi_data.csv " into R and save it by the name data. 
 # Notice the data in the file has row numbers that are redundant (so pay attention to the function arguments).
@@ -324,3 +324,12 @@ cat("Percentage of rows with at least one missing value: ",sum(!complete.cases(s
   }
   counts.mat2 <- counts.mat[1:10,1:10]
   heatmap(counts.mat2, main="Contact mixing pattern heatmap", xlab = "pickup area", ylab="dropoff area", keep.dendro = FALSE)
+
+  ##Insights from 6b:
+    #1. Most of the drivers belonging to comapnies which aren't exist in our data (probably 3-4 companies). beside it, '107' is the bigger company.
+    #2. The average fare per an hour is around 8, and the higher fare is taken in the early morning (4-6).
+    #3. Most customers are paying the fare in cash (65%), it's rare to see a tip by cash payment.
+      #tip in Prcard and credit card is the prefer way as we can see.
+    #4. The average tip rate is around 5.2%, and there is no a big difference in the part of the day. at evening we can see a little decrease in the rate.
+    #5. We can see a lot of movement in the 8 area, but also a high movement from 8 to 6/7.
+  
